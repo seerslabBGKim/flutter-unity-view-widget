@@ -34,11 +34,6 @@ class UnityPlayerUtils {
 
         private val mUnityEventListeners = CopyOnWriteArraySet<UnityEventListener>()
 
-        val unityActivityProperty = activity!!::class.memberProperties.firstOrNull {it.name == "mUnityPlayer"}
-        if (unityActivityProperty !== null && unityActivityProperty is KMutableProperty<*>) {
-            (unityActivityProperty as KMutableProperty<*>)?.setter?.call(activity!!, (unityPlayer as java.lang.Object?))
-        }
-
         fun focus() {
             try {
                 unityPlayer!!.windowFocusChanged(unityPlayer!!.requestFocus())
