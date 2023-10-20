@@ -13,6 +13,7 @@ import android.widget.FrameLayout
 import com.unity3d.player.IUnityPlayerLifecycleEvents
 import com.unity3d.player.UnityPlayer
 import java.util.concurrent.CopyOnWriteArraySet
+import kotlin.reflect.KMutableProperty
 
 
 class UnityPlayerUtils {
