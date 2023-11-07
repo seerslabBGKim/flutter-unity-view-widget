@@ -115,11 +115,12 @@ class _UnityWidgetState extends State<UnityWidget> {
           Text('Placeholder mode enabled, no native code will be called');
     }
 
-    return WebUnityWidgetView(
-      unitySrcUrl: widget.webUrl ?? '',
-      onWebViewCreated: _onPlatformViewCreated,
-      unityOptions: unityOptions,
-    );
+    return SizedBox();
+    // return WebUnityWidgetView(
+    //   unitySrcUrl: widget.webUrl ?? '',
+    //   onWebViewCreated: _onPlatformViewCreated,
+    //   unityOptions: unityOptions,
+    // );
   }
 
   Future<void> _onPlatformViewCreated() async {
